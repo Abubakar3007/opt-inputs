@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- verification code popup -->
+    <div class="popup_content forget_popup otp_popup" data-content="otp_content">
+        <span class="close_popup" onclick="closePopup('login_popup')">
+            <img src="/assets/img/close_popup.svg" alt="">
+        </span>
+        <div class="popup_header">
+            <h2>Enter verification code</h2>
+            <p>Enter the verification code you received on your email. <br>
+                <span>kindly check your spam section too.</span>
+            </p>
+        </div>
+        <form id="otpForm">
+            <div class="otp_inputs flex_col d_center gap-16">
+                <ul class="d_flex gap-16">
+                    <li>
+                        <input type="text" name="code[]" maxlength="1">
+                    </li>
+                    <li>
+                        <input type="text" name="code[]" maxlength="1">
+                    </li>
+                    <li>
+                        <input type="text" name="code[]" maxlength="1">
+                    </li>
+                    <li>
+                        <input type="text" name="code[]" maxlength="1">
+                    </li>
+                </ul>
+                <p>Didn’t receive OTP ? <a href="#" id="sendAgain"> Send again.</a>
+                </p>
+            </div>
+            <div class="auth_btns flex_col gap-16">
+                <button type="button" class="btn_bg medium_btn" id="createPasswordBtn"> Create new password
+                    <img src="/assets/img/forget_pass.png" alt="login image">
+                </button>
+                <a href="#" onclick="movePopup('forget_content')">Back</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
